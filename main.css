@@ -124,3 +124,22 @@ body {
 .main-menu-item.active {
 	background: none rgba(0, 0, 0, 0.15);
 }
+.main-time {
+	font-size: 120px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	margin-top: 20px;
+	font-family: "Arial Rounded MT W02 Bold", "Poppins", sans-serif;
+}
+@media (max-width: 400px) {
+	.main-time {
+		font-size: 90px;
+	}
+}
+.main-buttons {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	margin-left: 10px;
+}
