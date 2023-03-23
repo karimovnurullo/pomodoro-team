@@ -1,4 +1,3 @@
-
 "use strict";
 import { timeConvertor } from "./utils.js";
 const timer = document.querySelector(".main-time");
@@ -7,6 +6,7 @@ const startBtn = document.getElementById("startBtn");
 
 let time = 1500;
 let intervalID;
+
 // ui functions
 function handleStart() {
 	const isActive = startBtn.classList.contains("active");
