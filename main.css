@@ -80,3 +80,47 @@ body {
 	width: 16px;
 	height: 16px;
 }
+.main {
+	max-width: 480px;
+	width: 100%;
+	background: green;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 30px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 5px;
+	margin-top: 40px;
+}
+@media (max-width: 400px) {
+	.main {
+		padding: 20px;
+	}
+}
+.main-menu {
+	display: flex;
+	justify-content: center;
+}
+.main-menu-item {
+	padding: 2px 12px;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	color: #fff;
+	opacity: 1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	transition: all 0.03s;
+}
+@media (max-width: 400px) {
+	.main-menu-item {
+		font-size: 12px;
+	}
+}
+.main-menu-item:active {
+	transform: translateY(5px);
+}
+.main-menu-item.active {
+	background: none rgba(0, 0, 0, 0.15);
+}
