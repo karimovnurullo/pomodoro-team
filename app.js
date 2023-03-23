@@ -23,3 +23,32 @@ function handleStart() {
 		}, 1000);
 	}
 }
+
+function init() {
+	startBtn.addEventListener("click", handleStart);
+
+	for (let btn of actionBtns) {
+		btn.addEventListener("click", function () {
+			const currentTime = +btn.getAttribute("time");
+			const isActive = btn.classList.contains("active");
+
+			if (!isActive) {
+				const isYes = startBtn.classList.contains("active") ? confirm(`${btn.innerText} 🧐 ? `) : true;
+				if (isYes) {
+					for (let btn of actionBtns) {
+						btn.classList.remove("active");
+					}
+
+					clearInterval(intervalID);
+					time = currentTime;
+					timer.innerText = timeConvertor(time);
+					startBtn.classList.remove("active");
+					startBtn.innerText = "START";
+					btn.classList.add("active");
+				}
+			}
+		});
+	}
+}
+
+init();
