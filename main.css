@@ -40,3 +40,43 @@ body {
 	width: 20px;
 	height: 20px;
 }
+.nav-progress {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.nav-prog {
+	position: absolute;
+	transition: width 1s linear;
+	height: 3px;
+	background-color: #fff;
+	border-radius: 100px;
+	transform: translateY(-1px);
+}
+.nav-settings {
+	background-color: rgba(255, 255, 255, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+	gap: 5px;
+	color: #fff;
+	border-radius: 5px;
+	width: 86px;
+	height: 32px;
+	cursor: pointer;
+	transition: all 0.03s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.nav-settings:active {
+	transform: translateY(5px);
+}
+.nav-settings img {
+	width: 16px;
+	height: 16px;
+}
